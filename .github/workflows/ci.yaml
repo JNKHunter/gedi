@@ -15,5 +15,5 @@ jobs:
         uses: py-actions/py-dependency-install@v4
         with:
           path: requirements.txt
-      - name: Run Run tests
+      - name: Run tests
         run: pytest
