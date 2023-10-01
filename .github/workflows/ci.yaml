@@ -1,11 +1,7 @@
----
 name: CI
-on:
-  push: null
-  pull_request: null
+on: [push]  
 jobs:
   run-tests:
-    strategy: null
     name: Test
     runs-on: ubuntu-latest
     steps:
