@@ -8,10 +8,10 @@ jobs:
   run-tests:
     strategy:
       fail-fast: false
-    matrix:
-      os: [ubuntu-latest]
-      python_version:
-        "3.8.8"
+      matrix:
+        os: [ubuntu-latest]
+        python_version:
+          "3.8.8"
     name: Test
     runs-on: ${{ matrix.os }}
 
