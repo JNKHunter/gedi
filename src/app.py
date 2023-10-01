@@ -2,12 +2,19 @@
 
 from flask import Flask, request, render_template
 
-app = Flask(__name__)
+def create_app():
 
-@app.route("/")
-def main():
-    return render_template('index.html')
+    app = Flask(__name__)
 
-@app.route("/echo_user_input", methods=["POST"])
-def echo_input():
-    return render_template('results.html',input=request.form.get("user_input",""))
+    @app.route("/")
+    def main():
+        return render_template('index.html')
+
+    @app.route("/echo_user_input", methods=["POST"])
+    def echo_input():
+        return render_template('results.html',input=request.form.get("user_input",""))
+
+    return app
+
+
+app = create_app()
