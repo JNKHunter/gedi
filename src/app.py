@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from flask import Flask, request, render_template
+from flask_sqlalchemy import SQLAlchemy
 
 def create_app():
 
@@ -15,6 +16,9 @@ def create_app():
         return render_template('results.html',input=request.form.get("user_input",""))
 
     return app
+
+def setup_database(app):
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///entities.db'
 
 
 app = create_app()
