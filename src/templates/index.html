@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h3>{% block title %}Search for a gene{% endblock %}</h3>
+{% endblock %}
+
+{% block content %}
+  <form action="/echo_user_input" method="POST">
+   <select id="genes" name="user_input">
+    <option value="TP53">TP53</option>
+    <option value="EGFR">EGFR</option>
+    <option value="APOE">APOE</option>
+    <option value="TNF">TNF</option>
+  </select>
+   <input type="submit" value="Submit!">
+ </form>
+{% endblock %}
