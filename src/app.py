@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-
 from flask import Flask, request, render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 def create_app():
 
@@ -18,7 +18,17 @@ def create_app():
     return app
 
 def setup_database(app):
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///entities.db'
-
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///gedi.db'
+    #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost:5432/postgres'
+    db = SQLAlchemy(app)
+    return db
 
 app = create_app()
+db = setup_database(app)
+migrate = Migrate(app,db)
+
+class Article(db.Model):
+    __tablename__ = 'articles'
+
+    id = db.Column(db.Integer, primary_key=True)
+    author = db.Column(db.String(255))
