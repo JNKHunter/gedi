@@ -25,6 +25,7 @@ def setup_database(app):
 
 app = create_app()
 db = setup_database(app)
+
 migrate = Migrate(app,db)
 
 class Article(db.Model):
@@ -32,3 +33,11 @@ class Article(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     author = db.Column(db.String(255))
+
+class Predication(db.Model):
+    __tablename__ = 'predications'
+
+    id = db.Column(db.Integer, primary_key=True)
+    gene = db.Column(db.String(100))
+    disease =  db.Column(db.String(100))
+    pred_type = db.Column(db.String(100))
