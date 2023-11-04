@@ -41,3 +41,4 @@ class Predication(db.Model):
     gene = db.Column(db.String(100))
     disease =  db.Column(db.String(100))
     pred_type = db.Column(db.String(100))
+    article_id = db.Column(db.Integer, db.ForeignKey('articles.id'), nullable=False)        

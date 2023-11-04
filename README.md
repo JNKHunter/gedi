@@ -1,5 +1,9 @@
 Steps to run:
 docker compose up
 
-Separate terminal window in the root directory
-flash db migrate
+How to migrate the database:
+flask db migrate -m 'predications foreign key'
+flask db upgrade
+
+Running tests
+python -m pytest
