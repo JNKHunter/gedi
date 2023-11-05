@@ -5,6 +5,10 @@
 {% endblock %}
 
 {% block content %}
-<div>You searched for {{input}}<div>
-<div><a href="{{ url_for('main') }}">Search Again</a></div>
+<div>You searched for {{input}} | <a href="{{ url_for('main') }}">Search Again</a><div>
+
+
+{% for article in articles %}
+<p>{{ article.title }}</p>
+{% endfor %}
 {% endblock %}
