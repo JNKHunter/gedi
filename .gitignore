@@ -8,6 +8,7 @@ src/fake_dev_data.py
 instance/
 
 # Byte-compiled / optimized / DLL files
+*/__pycache/
 __pycache__/
 *.py[cod]
 *$py.class
