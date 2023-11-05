@@ -2,7 +2,7 @@ name: CI
 on: [push]  
 
 env:
-  DATABASE_URI: ${{ vars.DATABASE_URI }}
+  DATABASE_URI: ${{ env.DATABASE_URI }}
 
 jobs:
   run-tests:
