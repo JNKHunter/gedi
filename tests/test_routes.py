@@ -1,6 +1,6 @@
 from src.app import create_app
 
-def test_home(client):
+def test_home(client):	
 	response = client.get("/")
 	assert b"Search for a gene" in response.data
 
