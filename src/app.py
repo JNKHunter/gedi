@@ -20,7 +20,7 @@ def create_app():
     return app
 
 def setup_database(app):    
-    db_uri = os.getenv('DATABASE_URL')
+    db_uri = os.getenv('DATABASE_URI')
     app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
     db = SQLAlchemy(app)
     return db
