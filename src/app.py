@@ -34,7 +34,8 @@ class Article(db.Model):
     __tablename__ = 'articles'
 
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(255))    
+    title = db.Column(db.String(255))
+    uri = db.Column(db.String(255))    
 
 class Predication(db.Model):
     __tablename__ = 'predications'
