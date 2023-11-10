@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h3>{% block title %}Search Results{% endblock %}</h3>
+{% endblock %}
+
+{% block content %}
+<div>You searched for {{input}} | <a href="{{ url_for('main.main') }}">Search Again</a><div>
+
+
+<table class="table">
+<tr>
+  <th>Article</th>
+  <th>Gene</th>
+  <th>Relation</th>
+  <th>Disease</th>
+</tr>
+{% for art,pred in results %}
+<tr>
+  <td><a href="{{ art.uri }}" target="_blank">{{ art.title }}</a></td>
+  <td>{{ pred.gene }}</td>
+  <td>{{ pred.pred_type }}</td>
+  <td>{{ pred.disease }}</td>
+</tr>
+<p>{{ pred.title }}</p>
+{% endfor %}
+</table>
+{% endblock %}
