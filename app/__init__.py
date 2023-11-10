@@ -18,4 +18,5 @@ def create_app(database_uri=None):
     db.init_app(app)
     migrate = Migrate(app, db)
     app.register_blueprint(routes.bp)
+    
     return app
