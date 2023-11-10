@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template, Blueprint
 from flask_sqlalchemy import SQLAlchemy
-from src.database import db
-from src.models import Article, Predication
+from app.database import db
+from app.models import Article, Predication
 
 bp = Blueprint("main", __name__)
 

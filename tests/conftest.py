@@ -1,8 +1,8 @@
 from flask import Flask
 import pytest
-from src import create_app
-from src.database import db
-from src.models import Article, Predication
+from app import create_app
+from app.database import db
+from app.models import Article, Predication
 
 @pytest.fixture()
 def app():	

@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 from flask_sqlalchemy import SQLAlchemy
-from src.database import db
-from src import routes
+from app.database import db
+from app import routes
 import os
 
 database_uri = os.getenv('DATABASE_URI')

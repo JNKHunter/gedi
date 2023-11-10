@@ -1,6 +1,6 @@
-from src import create_app
-from src.models import Article, Predication
-from src.database import db
+from app import create_app
+from app.models import Article, Predication
+from app.database import db
 
 
 def test_home(client):	
