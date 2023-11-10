@@ -22,4 +22,4 @@ jobs:
       - name: Run tests
         run: pytest
       - name: Migrate
-        run: flask db update
+        run: flask db upgrade
