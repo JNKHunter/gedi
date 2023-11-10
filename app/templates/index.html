@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block content %}
-  <form action="/echo_user_input" method="POST">
-   <select id="genes" name="user_input">
+  <form action="/results" method="GET">
+   <select id="gene" name="gene">
     <option value="TP53">TP53</option>
     <option value="EGFR">EGFR</option>
     <option value="APOE">APOE</option>

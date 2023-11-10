@@ -10,4 +10,4 @@ Running tests
 python -m pytest
 
 Set DATABASE_URL environment variable:
-`export DB_URI=PATH_TO_SQLITE_DB_OR_POSTGRES_OR_OTHER_DB`
+`export DATABASE_URL=PATH_TO_SQLITE_DB_OR_POSTGRES_OR_OTHER_DB`
